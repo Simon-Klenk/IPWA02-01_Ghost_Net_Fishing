@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      
+	<h:head>
+		<title>Startseite</title>
+	</h:head>
+
+	<h:body>
+		<h1 align="center"><h:outputText value="Shea Sepherd"></h:outputText></h1>
+		<h:form>
+			<div align="center">
+				<h:panelGrid columns="1">
+			  		<h:commandButton value="Neues Geisternetz erfassen" action="#{indexController.newGhostNet}" style="width:300px; height:40px"/>
+					<h:commandButton value="Geisternetze anzeigen und Status ändern" action="#{indexController.recoveringPerson}" style="width:300px; height:40px"/>
+				</h:panelGrid>
+			</div>
+		</h:form>
+	</h:body>
+</html>
