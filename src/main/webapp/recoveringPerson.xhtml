@@ -15,21 +15,38 @@
 		
 		<div align="center">
 			<h:outputLabel value="Bevor sie Geisternetze sehen können, müssen Sie sich als bergende Person anmelden" style="color: #FF0000;"/>
+			<p/>
 		</div>
 		<h:form>
 			<div align="center">
-				<h:panelGrid columns="2" id="panel">
-		      		<h:outputLabel value="Name" for="name"/>
-		      		<h:inputText id="name" value="#{recoveringPersonController.name}" size="40"/>
+				<h:panelGrid columns="3" id="panel">
+		      		<h:outputLabel value="Name *" for="name"/>
+		      		<h:inputText id="name" value="#{recoveringPersonController.name}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" validatorMessage="Bitte nur Buchstaben eingeben">
+		      			<f:validateRegex pattern="[a-zA-Z]+"/>
+		      		</h:inputText>
+		      		<h:message for="name" style="color: red"/>
 		      		
-		      		<h:outputLabel value="Vorname" for="firstName"/>
-		      		<h:inputText id="firstName" value="#{recoveringPersonController.firstName}" size="40"/>
+		      		<h:outputLabel value="Vorname *" for="firstName"/>
+		      		<h:inputText id="firstName" value="#{recoveringPersonController.firstName}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" validatorMessage="Bitte nur Buchstaben eingeben">
+		      			<f:validateRegex pattern="[a-zA-Z]+"/>
+		      		</h:inputText>
+		      		<h:message for="firstName" style="color: red"/>
 		      		
-		      		<h:outputLabel value="Telefonnummer" for="phoneNumber"/>
-		      		<h:inputText id="phoneNumber" value="#{recoveringPersonController.phoneNumber}" size="40"/>
+		      		<h:outputLabel value="Telefonnummer *" for="phoneNumber"/>
+		      		<h:inputText id="phoneNumber" value="#{recoveringPersonController.phoneNumber}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" validatorMessage="Bitte nur Telefonnummer im Format: '(+)123456789' eingeben">
+		      			<f:validateRegex pattern="[0-9+]*"/>
+		      		</h:inputText>
+		      		<h:message for="phoneNumber" style="color: red"/>
 		      		
-		      		<h:commandButton value="Abbrechen" action="#{recoveringPersonController.cancel}"/>
-		      		<h:commandButton value="Speichern" action="#{recoveringPersonController.nextSite}"/>
+		      		<h:commandButton value="Abbrechen" action="#{recoveringPersonController.cancel}" style="width:200px; height:25px" immediate="true"/>
+		      		<h:commandButton value="Speichern" action="#{recoveringPersonController.nextSite}" style="width:200px; height:25px"/>
+		      		<br/>
+		      		
+		      		<br/>
+		      		<br/>
+		      		<br/>
+		      		
+		      		<h:outputLabel value="*Pflichtfeld"/>		    	
 		    	</h:panelGrid>
 		    </div>
 	    </h:form>

@@ -28,8 +28,8 @@ public class GhostNets implements Serializable {
 		this.setSaved(Status.SAVED);
 	}
 	
-	public void createNewGhostNet(double latitude, double longitude, double size, String status, String name, String firstName, int phoneNumber) {
-        ReportingPerson reportingPerson = new ReportingPerson(name, firstName, phoneNumber);
+	public void createNewGhostNet(Double latitude, Double longitude, Double size, String status, String name, String firstName, String phoneNumber) {
+		ReportingPerson reportingPerson = new ReportingPerson(name, firstName, phoneNumber);
 		GhostNet ghostNet = new GhostNet(latitude, longitude, size, status, reportingPerson);
 		reportingPerson.getGhostNet().add(ghostNet);
 		
@@ -54,7 +54,7 @@ public class GhostNets implements Serializable {
         return ghostNets;
     }
     
-    public void updateStatusRecoveryRegistered(GhostNet ghostNet, String name, String firstName, int phoneNumber) {
+    public void updateStatusRecoveryRegistered(GhostNet ghostNet, String name, String firstName, String phoneNumber) {
     	RecoveringPerson recoveringPerson = new RecoveringPerson(name, firstName, phoneNumber);
         ghostNet.setStatus(Status.RECOVERY_REGISTERED);
         ghostNet.setRecoveringPerson(recoveringPerson);

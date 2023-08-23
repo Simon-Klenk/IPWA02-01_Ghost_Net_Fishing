@@ -11,7 +11,7 @@ public class RecoveringPersonController implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String firstName;
-	private int phoneNumber;
+	private String phoneNumber;
 	
 	
 	public String nextSite() {
@@ -38,11 +38,11 @@ public class RecoveringPersonController implements Serializable {
 		this.firstName = firstName;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	

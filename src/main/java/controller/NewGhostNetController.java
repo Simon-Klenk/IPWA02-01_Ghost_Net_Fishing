@@ -11,12 +11,12 @@ import objects.Status;
 public class NewGhostNetController implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private double latitude;
-	private double longitude;
-	private double size;
+	private Double latitude;
+	private Double longitude;
+	private Double size;
 	private String name;
 	private String firstName;
-	private int phoneNumber;	
+	private String phoneNumber;
 	@Inject
 	GhostNets ghostNets;
 	
@@ -30,27 +30,27 @@ public class NewGhostNetController implements Serializable {
 		return Pages.INDEX;
 	}
 
-	public double getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(double latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
-	public double getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(double longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 
-	public double getSize() {
+	public Double getSize() {
 		return size;
 	}
 
-	public void setSize(double size) {
+	public void setSize(Double size) {
 		this.size = size;
 	}
 
@@ -70,12 +70,12 @@ public class NewGhostNetController implements Serializable {
 		this.firstName = firstName;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
+
 }

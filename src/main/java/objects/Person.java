@@ -17,7 +17,7 @@ public abstract class Person {
 	private int id;
 	private String name;
 	private String firstName;
-	private int phoneNumber;
+	private String phoneNumber;
 	@OneToMany (targetEntity = GhostNet.class, cascade = CascadeType.ALL)
 	private List<GhostNet> ghostNet = new ArrayList<>();
 	
@@ -26,7 +26,7 @@ public abstract class Person {
 		
 	}
 	
-	public Person(String name, String firstName, int phoneNumber) {
+	public Person(String name, String firstName, String phoneNumber) {
 		this.setName(name);
 		this.setFirstName(firstName);
 		this.setPhoneNumber(phoneNumber);
@@ -49,11 +49,11 @@ public abstract class Person {
 		this.firstName = firstName;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

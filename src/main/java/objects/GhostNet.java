@@ -11,9 +11,9 @@ public class GhostNet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private double latitude;
-	private double longitude;
-	private double size;
+	private Double latitude;
+	private Double longitude;
+	private Double size;
 	private String status;
 	@ManyToOne
 	ReportingPerson reportingPerson;
@@ -24,7 +24,7 @@ public class GhostNet {
 		
 	}
 	
-	public GhostNet(double latitude, double longitude, double size, String status, ReportingPerson reportingPerson) {
+	public GhostNet(Double latitude, Double longitude, Double size, String status, ReportingPerson reportingPerson) {
 		this.setLatitude(latitude);
 		this.setLongitude(longitude);
 		this.setSize(size);
@@ -33,27 +33,27 @@ public class GhostNet {
 	}
 	
 
-	public double getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 	
-	public void setLatitude(double latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 	
-	public double getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 	
-	public void setLongitude(double longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 	
-	public double getSize() {
+	public Double getSize() {
 		return size;
 	}
 	
-	public void setSize(double size) {
+	public void setSize(Double size) {
 		this.size = size;
 	}
 	

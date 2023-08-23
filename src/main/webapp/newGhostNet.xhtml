@@ -15,27 +15,46 @@
 		
 		<h:form>
 			<div align="center">
-				<h:panelGrid columns="2">
-				    <h:outputLabel value="Breitengrad" for="latitude" />
-		      		<h:inputText id="latitude" value="#{newGhostNetController.latitude}"  size="40"/>
+				<h:panelGrid columns="3">
+				    <h:outputLabel value="Breitengrad *" for="latitude" />
+		      		<h:inputText id="latitude" value="#{newGhostNetController.latitude}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" converterMessage="Bitte nur Zahlen eingeben"/>
+		      		<h:message for="latitude" style="color: red"/>
 		      		
-		      		<h:outputLabel value="Längengrad" for="longitude" />
-		      		<h:inputText id="longitude" value="#{newGhostNetController.longitude}"  size="40"/>
+		      		<h:outputLabel value="Längengrad *" for="longitude" />
+		      		<h:inputText id="longitude" value="#{newGhostNetController.longitude}" style="width:200px" requiredMessage="Feld darf nicht leer sein!" required="true" converterMessage="Bitte nur Zahlen eingeben"/>     			
+		      		<h:message for="longitude" style="color: red"/>
 		      		
-		      		<h:outputLabel value="Größe" for="size" />
-		      		<h:inputText id="size" value="#{newGhostNetController.size}"  size="40"/>
+		      		<h:outputLabel value="Größe *" for="size" />
+		      		<h:inputText id="size" value="#{newGhostNetController.size}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" converterMessage="Bitte nur Zahlen eingeben"/>
+		      		<h:message for="size" style="color: red"/>
 		      		
-		      		<h:outputLabel value="Name" for="name"/>
-		      		<h:inputText id="name" value="#{newGhostNetController.name}" size="40"/>
+		      		<h:outputLabel value="Name *" for="name"/>
+		      		<h:inputText id="name" value="#{newGhostNetController.name}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" validatorMessage="Bitte nur Buchstaben eingeben">
+		      			<f:validateRegex pattern="[a-zA-Z]+"/>
+		      		</h:inputText>
+		      		<h:message for="name" style="color: red"/>
 		      		
-		      		<h:outputLabel value="Vorname" for="firstName"/>
-		      		<h:inputText id="firstName" value="#{newGhostNetController.firstName}" size="40"/>
+		      		<h:outputLabel value="Vorname *" for="firstName"/>
+		      		<h:inputText id="firstName" value="#{newGhostNetController.firstName}" style="width:200px" required="true" requiredMessage="Feld darf nicht leer sein!" validatorMessage="Bitte nur Buchstaben eingeben">
+		      			<f:validateRegex pattern="[a-zA-Z]+"/>
+		      		</h:inputText>
+		      		<h:message for="firstName" style="color: red"/>
 		      		
 		      		<h:outputLabel value="Telefonnummer" for="phoneNumber"/>
-		      		<h:inputText id="phoneNumber" value="#{newGhostNetController.phoneNumber}" size="40"/>
+		      		<h:inputText id="phoneNumber" value="#{newGhostNetController.phoneNumber}" style="width:200px" validatorMessage="Bitte nur Telefonnummer im Format: '(+)123456789' eingeben">
+		      			<f:validateRegex pattern="[0-9+]*"/>
+		      		</h:inputText>
+		      		<h:message for="phoneNumber"  style="color: red"/>
 		      		
-		      		<h:commandButton value="Abbrechen" action="#{newGhostNetController.cancel}"/>
-		      		<h:commandButton value="Speichern" action="#{newGhostNetController.createNewGhostNet}"/>
+		      		<h:commandButton value="Abbrechen" action="#{newGhostNetController.cancel}" style="width:200px; height:25px" immediate="true"/>
+		      		<h:commandButton value="Speichern" action="#{newGhostNetController.createNewGhostNet}" style="width:200px; height:25px"/>
+		      		<br/>
+		      		
+		      		<br/>
+		      		<br/>
+		      		<br/>
+		      		
+		      		<h:outputLabel value="*Pflichtfeld"/>
 		    	</h:panelGrid>
 	    	</div>
 	    </h:form>
