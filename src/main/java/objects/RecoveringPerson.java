@@ -9,8 +9,8 @@ public class RecoveringPerson extends Person {
 		
 	}
 
-	public RecoveringPerson(String name, String lastName, String phoneNumber) {
-		super(name, lastName, phoneNumber);
+	public RecoveringPerson(String name, String firstName, String phoneNumber) {
+		super(name, firstName, phoneNumber);
 	}
 
 }

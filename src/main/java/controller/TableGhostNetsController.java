@@ -19,7 +19,7 @@ public class TableGhostNetsController implements Serializable {
 
     
     public void recoveryRegistered(GhostNet ghostNet) {
-    	ghostNets.updateStatusRecoveryRegistered(ghostNet, recoveringPersonController.getFirstName(), recoveringPersonController.getFirstName(), recoveringPersonController.getPhoneNumber());
+    	ghostNets.updateStatusRecoveryRegistered(ghostNet, recoveringPersonController.getName(), recoveringPersonController.getFirstName(), recoveringPersonController.getPhoneNumber());
     }
     
     public void saved(GhostNet ghostNet) {
