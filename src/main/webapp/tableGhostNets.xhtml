@@ -29,7 +29,7 @@
 		</ui:insert>
 		
 		<div align="center">
-			<h:dataTable var="ghostNet" value="#{ghostNets.ghostNets}">
+			<h:dataTable var="ghostNet" value="#{ghostNets.ghostNets}" rendered="#{recoveringPersonController.login}">
 		  		<h:column>
 		  			<f:facet name="header">Breitengrad</f:facet><h:outputText value="#{ghostNet.latitude}"/>
 		  		</h:column>
