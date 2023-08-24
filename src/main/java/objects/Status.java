@@ -1,10 +1,12 @@
 package objects;
 
+/**
+ * Enumeration für Status der GhostNet.
+ */
 public class Status {
-	
-	public static final String REPORTED = "Gemeldet";
-	public static final String RECOVERY_REGISTERED = "Bergung angemeldet";
-	public static final String SAVED = "Geborgen";
-	public static final String PRIVATE = "private";
+
+  public static final String REPORTED = "Gemeldet";
+  public static final String RECOVERY_REGISTERED = "Bergung angemeldet";
+  public static final String SAVED = "Geborgen";
 
 }

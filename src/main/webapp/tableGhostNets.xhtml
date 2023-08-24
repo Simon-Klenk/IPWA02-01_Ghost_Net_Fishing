@@ -50,13 +50,13 @@
 		  		</h:column>
 		  		<h:column>
 			  			<f:facet name="header">Bergende Person</f:facet>
-				  		<h:outputText value="#{ghostNet.recoveringPerson.firstName} #{ghostNet.recoveringPerson.name}" rendered="${ghostNet.status == ghostNets.recoveryGegistered || ghostNet.status == ghostNets.saved}"/>
+				  		<h:outputText value="#{ghostNet.recoveringPerson.firstName} #{ghostNet.recoveringPerson.name}" rendered="${ghostNet.status == ghostNets.recoveryRegistered || ghostNet.status == ghostNets.saved}"/>
 				  		<br/>
-						<h:outputText value="#{ghostNet.recoveringPerson.phoneNumber}" rendered="${ghostNet.status == ghostNets.recoveryGegistered || ghostNet.status == ghostNets.saved}"/>
+						<h:outputText value="#{ghostNet.recoveringPerson.phoneNumber}" rendered="${ghostNet.status == ghostNets.recoveryRegistered || ghostNet.status == ghostNets.saved}"/>
 		  		</h:column>
 		  		<h:column>
 		  			<h:form>
-		  				<h:commandButton value="Bergung anmelden" action="#{tableGhostNetsController.recoveryRegistered(ghostNet)}" disabled="${ghostNet.status == ghostNets.recoveryGegistered || ghostNet.status == ghostNets.saved}"/>
+		  				<h:commandButton value="Bergung anmelden" action="#{tableGhostNetsController.recoveryRegistered(ghostNet)}" disabled="${ghostNet.status == ghostNets.recoveryRegistered || ghostNet.status == ghostNets.saved}"/>
 		  			</h:form>
 		  		</h:column>
 		  		<h:column>
